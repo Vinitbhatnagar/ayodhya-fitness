@@ -1,0 +1,150 @@
+.trainers-section {
+    background: #050505;
+    color: white;
+    padding: 120px 6%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title span {
+    color: #d88b52;
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    margin-top: 15px;
+
+    font-size:
+        clamp(2.5rem, 5vw, 4.5rem);
+}
+
+.trainers-grid {
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.trainer-card {
+    position: relative;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, .04);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, .08);
+
+    transition: all .4s ease;
+}
+
+.trainer-card:hover {
+    border-color: rgba(216, 139, 82, .35);
+
+    box-shadow:
+        0 0 40px rgba(216, 139, 82, .18);
+}
+
+.trainer-image {
+    overflow: hidden;
+}
+
+.trainer-image img {
+    width: 100%;
+    display: block;
+
+    transition:
+        transform .5s ease;
+}
+
+.trainer-card:hover .trainer-image img {
+    transform:
+        scale(1.08) translateY(-10px);
+}
+
+.trainer-info {
+    padding: 25px;
+}
+
+.exp-badge {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background:
+        rgba(216, 139, 82, .15);
+
+    border:
+        1px solid rgba(216, 139, 82, .3);
+
+    color: #d88b52;
+
+    font-size: .8rem;
+
+    margin-bottom: 12px;
+}
+
+.trainer-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.trainer-info p {
+    color: rgba(255, 255, 255, .7);
+}
+
+.trainer-card::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(135deg,
+            transparent,
+            rgba(216, 139, 82, .08),
+            transparent);
+
+    opacity: 0;
+
+    transition: .4s;
+}
+
+.trainer-card:hover::before {
+    opacity: 1;
+}
+
+@media(max-width:1200px) {
+
+    .trainers-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+@media(max-width:768px) {
+
+    .trainers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trainer-image {
+        height: 320px;
+    }
+}
