@@ -119,3 +119,25 @@
 .feature-card:hover .icon-box {
     transform: scale(1.15) rotate(-5deg);
 }
+
+@media (max-width: 768px) {
+
+    .horizontal-wrapper {
+        height: auto;
+    }
+
+    .horizontal-track {
+
+        transform: none !important;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .panel {
+        width: 100%;
+        min-height: 70vh;
+    }
+}

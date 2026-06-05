@@ -3,6 +3,51 @@ import heroVideo from "../assets/videos/hero.mp4";
 import { ArrowRight, PlayCircle } from "lucide-react";
 
 export default function Hero() {
+    const heroRef = useRef(null);
+    useLayoutEffect(() => {
+
+        const ctx = gsap.context(() => {
+
+            const tl = gsap.timeline();
+
+            tl.from(".hero-tag", {
+                opacity: 0,
+                y: 50,
+                duration: 0.8,
+                ease: "power3.out",
+            })
+
+                .from(".hero h1", {
+                    opacity: 0,
+                    y: 100,
+                    duration: 1.2,
+                    ease: "power4.out",
+                }, "-=0.3")
+
+                .from(".hero p", {
+                    opacity: 0,
+                    y: 50,
+                    duration: 0.8,
+                }, "-=0.8")
+
+                .from(".hero-buttons", {
+                    opacity: 0,
+                    y: 40,
+                    duration: 0.8,
+                }, "-=0.5")
+
+                .from(".hero-stat", {
+                    opacity: 0,
+                    y: 50,
+                    stagger: 0.15,
+                    duration: 0.7,
+                }, "-=0.4");
+
+        }, heroRef);
+
+        return () => ctx.revert();
+
+    }, []);
     return (
         <section id="home" className="hero">
 
