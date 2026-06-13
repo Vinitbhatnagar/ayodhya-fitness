@@ -6,9 +6,9 @@ import "../styles/facilitiesExperience.css";
 
 import facility1 from "../assets/facilities/facility1.jpg";
 import facility2 from "../assets/facilities/facility2.jpg";
-import facility3 from "../assets/facilities/facility3.jpg";
+import facility3 from "../assets/facilities/facility5.jpg";
 import facility4 from "../assets/facilities/facility4.jpg";
-import facility5 from "../assets/facilities/facility5.jpg";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,23 +44,19 @@ export default function FacilitiesExperience() {
   const slides = [
     {
       image: facility1,
-      title: "Free Weights Zone",
+      title: "Hi-Tech Cardio Section",
     },
     {
       image: facility2,
-      title: "Cardio Arena",
+      title: "Weight Training",
     },
     {
       image: facility3,
-      title: "Functional Training",
+      title: "Body Build-Up",
     },
     {
       image: facility4,
       title: "Personal Training",
-    },
-    {
-      image: facility5,
-      title: "Recovery Area",
     },
   ];
 

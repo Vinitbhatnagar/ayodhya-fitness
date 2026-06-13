@@ -84,11 +84,6 @@ export default function Pricing() {
                 </div>
 
                 <div className="trust-item">
-                    <h3>500+</h3>
-                    <p>Active Members</p>
-                </div>
-
-                <div className="trust-item">
                     <h3>4.9★</h3>
                     <p>Member Rating</p>
                 </div>
@@ -112,8 +107,8 @@ export default function Pricing() {
 
                 <button
                     className={`popular ${active === "personal"
-                            ? "active"
-                            : ""
+                        ? "active"
+                        : ""
                         }`}
                     onClick={() =>
                         setActive("personal")

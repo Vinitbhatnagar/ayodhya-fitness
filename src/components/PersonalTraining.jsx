@@ -1,4 +1,5 @@
 import "../styles/personalTraining.css";
+import { Link } from "react-scroll";
 import {
     Dumbbell,
     Target,
@@ -94,10 +95,16 @@ export default function PersonalTraining() {
 
                     </div>
 
-                    <button className="pt-btn">
-                        Explore PT Plans
-                    </button>
-
+                    <Link
+                        to="pricing"
+                        smooth={true}
+                        duration={1000}
+                        offset={-80}
+                    >
+                        <button className="pt-btn">
+                            Explore PT Plans
+                        </button>
+                    </Link>
                 </div>
 
             </div>

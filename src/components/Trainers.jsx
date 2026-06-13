@@ -1,9 +1,9 @@
 import "../styles/trainers.css";
 
-import trainer1 from "../assets/trainers/trainer1.jpg";
-import trainer2 from "../assets/trainers/trainer2.png";
+import trainer1 from "../assets/trainers/trainer2.png";
+import trainer2 from "../assets/trainers/bhavya.jpg";
 import trainer3 from "../assets/trainers/PriteshTrainer.jpeg";
-import trainer4 from "../assets/trainers/PriteshTrainer.jpeg";
+import trainer4 from "../assets/trainers/kaushalya.jpeg";
 import Tilt from "react-parallax-tilt";
 import useReveal from "../hooks/useReveal";
 import "../styles/trainers.css";
@@ -17,7 +17,7 @@ const trainers = [
     },
     {
         name: "Bhavya",
-        role: "Personal Trainer",
+        role: "Personal Training specialist",
         exp: "5+ Years",
         image: trainer2,
     },
@@ -29,7 +29,7 @@ const trainers = [
     },
     {
         name: "Kaushalya",
-        role: "Transformation Coach",
+        role: "Female Trainer",
         exp: "2+ Years",
         image: trainer4,
     },

@@ -13,6 +13,7 @@ import Transformations from "./components/Transformations";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import ScrollProgress from "./components/ScrollProgress";
+import Contact from "./components/Contact";
 function App() {
   useEffect(() => {
     // Lenis Smooth Scroll
@@ -59,6 +60,7 @@ function App() {
       <Testimonials />
       <Pricing />
       <ScrollProgress />
+      <Contact />
     </>
   );
 }

@@ -1,6 +1,9 @@
 import "../styles/hero.css";
+import { Link } from "react-scroll";
+import { useRef, useLayoutEffect } from "react";
+import gsap from "gsap";
 import heroVideo from "../assets/videos/hero.mp4";
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
     const heroRef = useRef(null);
@@ -86,24 +89,20 @@ export default function Hero() {
 
                 <div className="hero-buttons">
 
-                    <button className="join-btn">
-                        Join Now
-                        <ArrowRight size={18} />
-                    </button>
-
-                    <button className="tour-btn">
-                        <PlayCircle size={18} />
-                        Gym Tour
-                    </button>
+                    <Link
+                        to="pricing"
+                        smooth
+                        duration={1000}
+                    >
+                        <button className="join-btn">
+                            Join Now
+                            <ArrowRight size={18} />
+                        </button>
+                    </Link>
 
                 </div>
 
                 <div className="hero-stats">
-
-                    <div className="hero-stat">
-                        <h3>500+</h3>
-                        <span>Members</span>
-                    </div>
 
                     <div className="hero-stat">
                         <h3>1000+</h3>
@@ -111,7 +110,7 @@ export default function Hero() {
                     </div>
 
                     <div className="hero-stat">
-                        <h3>10+</h3>
+                        <h3>5+</h3>
                         <span>Expert Trainers</span>
                     </div>
 
